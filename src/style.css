@@ -6,19 +6,19 @@
 @font-face {
   font-family: 'avenir-medium';
   font-style: normal;
-  src: local('avenir-medium'), url(./Avenir_LT_Std_65_Medium.otf) format('truetype');
+  src: local('avenir-medium'), url(./fonts/Avenir_LT_Std_65_Medium.otf) format('truetype');
 }
 
 @font-face {
   font-family: 'avenir-heavy';
   font-style: normal;
-  src: local('avenir-heavy'), url(./Avenir_LT_Std_85_Heavy.otf) format('truetype');
+  src: local('avenir-heavy'), url(./fonts/Avenir_LT_Std_85_Heavy.otf) format('truetype');
 }
 
 @font-face {
   font-family: 'avenir-black';
   font-style: normal;
-  src: local('avenir-black'), url(./Avenir_LT_Std_95_Black.otf) format('truetype');
+  src: local('avenir-black'), url(./fonts/Avenir_LT_Std_95_Black.otf) format('truetype');
 }
 
 
