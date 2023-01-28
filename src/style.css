@@ -1,12 +1,36 @@
+@font-face {
+  font-family: 'avenir-normal';
+  font-style: normal;
+  src: local('avenir-normal'), url(./fonts/Avenir_LT_Std_55_Roman.otf) format('truetype');
+}
+@font-face {
+  font-family: 'avenir-medium';
+  font-style: normal;
+  src: local('avenir-medium'), url(./Avenir_LT_Std_65_Medium.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'avenir-heavy';
+  font-style: normal;
+  src: local('avenir-heavy'), url(./Avenir_LT_Std_85_Heavy.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'avenir-black';
+  font-style: normal;
+  src: local('avenir-black'), url(./Avenir_LT_Std_95_Black.otf) format('truetype');
+}
+
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'avenir-medium', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(8, 5, 5, 0.87);
+  background-color: #ECECEC;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,22 +39,184 @@
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+@media screen and (min-width: 1200px) {
+  header {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .presentation img {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .presentation {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+  }
+
+  .presentation img {
+    width: 300px!important;
+  }
+}
+
+.site-container {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.presentation img {
+  width: 200px;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.5em;
+  font-family: 'avenir-black';
+  font-weight: 800;
   line-height: 1.1;
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+h2 {
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: 'avenir-medium';
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin-top: 120px;
+  overflow: hidden;
+  font-size: 15em;
+  line-height: 0;
+  font-family: 'avenir-medium';
+  color: #FFF;
+  background-color: rgba(8, 5, 5, 0.87);
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 120s linear infinite;
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.actuellement {
+  display: flex;
+  align-items: baseline;
+}
+
+.actuellement .blob{
+  margin-right: 14px;
+}
+
+
+
+.blob {
+  background: black;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  height: 20px;
+  width: 20px;
+  transform: scale(1);
+  animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.blob.green {
+  background: rgba(51, 217, 178, 1);
+  box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+  }
+}
+
+.contact {
+  margin-top: 24px;
+  line-height: 2;
+}
+
+.item {
+  font-size: 1.5rem;
+  margin-top: 12px;
 }
