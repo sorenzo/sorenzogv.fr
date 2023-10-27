@@ -1,29 +1,5 @@
-@font-face {
-  font-family: 'avenir-normal';
-  font-style: normal;
-  src: local('avenir-normal'), url(./fonts/Avenir_LT_Std_55_Roman.otf) format('truetype');
-}
-@font-face {
-  font-family: 'avenir-medium';
-  font-style: normal;
-  src: local('avenir-medium'), url(./fonts/Avenir_LT_Std_65_Medium.otf) format('truetype');
-}
-
-@font-face {
-  font-family: 'avenir-heavy';
-  font-style: normal;
-  src: local('avenir-heavy'), url(./fonts/Avenir_LT_Std_85_Heavy.otf) format('truetype');
-}
-
-@font-face {
-  font-family: 'avenir-black';
-  font-style: normal;
-  src: local('avenir-black'), url(./fonts/Avenir_LT_Std_95_Black.otf) format('truetype');
-}
-
-
 :root {
-  font-family: 'avenir-medium', Inter, Helvetica, Arial, sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -96,7 +72,6 @@ header {
 
 h1 {
   font-size: 3.5em;
-  font-family: 'avenir-black';
   font-weight: 800;
   line-height: 1.1;
 }
@@ -112,9 +87,8 @@ a {
   text-decoration: underline;
 }
 
-h4 {
+.name {
   font-size: 1.5em;
-  font-family: 'avenir-medium';
   font-weight: 500;
   line-height: 1.1;
 }
@@ -125,7 +99,6 @@ h4 {
   overflow: hidden;
   font-size: 15em;
   line-height: 0;
-  font-family: 'avenir-medium';
   color: #FFF;
   background-color: rgba(8, 5, 5, 0.87);
 }
@@ -158,8 +131,6 @@ h4 {
 .actuellement .blob{
   margin-right: 14px;
 }
-
-
 
 .blob {
   background: black;
